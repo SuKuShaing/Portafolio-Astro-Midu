@@ -2,6 +2,17 @@
 
 Tutorial disponible en [YouTube](https://youtu.be/HEMvsJTBweY?si=ihMFpj3WMR71nMb0)
 
+## Recursos
+### Imágenes
+https://avatar.iran.liara.run/
+
+### Fuentes
+https://fontsource.org/fonts/onest/install
+
+
+
+
+
 
 
 
