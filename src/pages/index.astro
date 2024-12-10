@@ -8,6 +8,7 @@ import GitHub from "../components/icons/GitHub.astro";
 import MailIcon from "../components/icons/Mail.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
 ---
 
 <Layout
@@ -15,7 +16,7 @@ import SectionContainer from "../components/SectionContainer.astro";
 	description="Contrata a midudev para crear tu sitio"
 >
 	<main>
-		<SectionContainer>
+		<SectionContainer class="py-44 pb-24">
 			<img
 				class="rounded-full size-12"
 				src="https://avatar.iran.liara.run/username?username=Seba+Sanhue"
@@ -58,7 +59,10 @@ import SectionContainer from "../components/SectionContainer.astro";
 			</nav>
 		</SectionContainer>
 
-		<SectionContainer>
+		<SectionContainer class="mt-20 pt-5">
+			<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-7"/>
+				Experiencia Laboral</h2>
 			<Experience />
 		</SectionContainer>
 	</main>
