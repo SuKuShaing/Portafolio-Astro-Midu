@@ -1,27 +1,58 @@
 ---
+import NextJs from "./icons/Next.astro";
+import TailwindCSS from "./icons/Tailwind.astro";
+import ReactIcon from "./icons/React.astro";
+
+const TAGS = {
+	NEXT: {
+		name: "Next.js",
+		class: "bg-black text-white",
+		icon: NextJs,
+	},
+	TAILWINDCSS: {
+		name: "TailwindCSS",
+		class: "bg-white text-[#73bcf6]",
+		icon: TailwindCSS,
+	},
+    REACT: {
+        name: "React",
+        class: "bg-blue-600 text-white",
+        icon: ReactIcon,
+    },
+};
+
 const PROJECTS = [
-    {
-        title: "Project 1",
-        description: "This is a description of the project 1",
-        link: "https://www.google.com",
-        github: "https://www.github.com",
-        image: "https://via.placeholder.com/150",
-        tags: ["React", "TailwindCSS", "JavaScript"],
-    }
-]
+	{
+		title: "Project 1 nombre",
+		description: "This is a description of the project 1",
+		link: "#",
+		github: "#",
+		image: "/projects/Screenshot_this.webp",
+		tags: [TAGS.NEXT, TAGS.TAILWINDCSS, TAGS.REACT],
+	},
+];
 ---
 
 {
-    PROJECTS.map(({ title, description, tags, image }) => (
-        <article>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <ul>
-                {tags.map(tag => (
-                    <li>{tag}</li>
-                ))}
-            </ul>
-            <img src={image} alt={`captura de pantalla del proyecto ${image}`} />
-        </article>
-    ))
+	PROJECTS.map(({ title, description, tags, image }) => (
+		<article>
+			<h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+			<p class="text-lg mb-4 text-pretty">{description}</p>
+			<ul class="flex gap-x-2 flex-row mb-4">
+				{tags.map((tag) => (
+					<li>
+						<span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}>
+							<tag.icon class="size-4" />
+							{tag.name}
+						</span>
+					</li>
+				))}
+			</ul>
+			<img
+				class="rounded shadow-2xl shadow-white/10"
+				src={image}
+				alt={`captura de pantalla del proyecto ${image}`}
+			/>
+		</article>
+	))
 }
