@@ -9,6 +9,8 @@ import MailIcon from "../components/icons/Mail.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
@@ -16,7 +18,7 @@ import Briefcase from "../components/icons/Briefcase.astro";
 	description="Contrata a midudev para crear tu sitio"
 >
 	<main class="px-4">
-		<SectionContainer class="py-44 pb-24">
+		<SectionContainer class="py-44 pb-32">
 			<img
 				class="rounded-full size-12"
 				src="https://avatar.iran.liara.run/username?username=Seba+Sanhue"
@@ -60,10 +62,19 @@ import Briefcase from "../components/icons/Briefcase.astro";
 		</SectionContainer>
 
 		<SectionContainer id="experiencia" class="mt-20 pt-5">
-			<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Briefcase class="size-7"/>
-				Experiencia Laboral</h2>
+				Experiencia Laboral
+			</h2>
 			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="experiencia" class="mt-20 pt-5">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Code class="size-7"/>
+				Proyectos
+			</h2>
+			<Projects />
 		</SectionContainer>
 	</main>
 </Layout>
